@@ -22,6 +22,8 @@ const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav__list');
 
 hamburger.addEventListener('click', function () {
+  // Enable transition only after first interaction to prevent flash on breakpoint change
+  navList.style.transition = 'opacity 0.35s ease, visibility 0.35s ease';
   const isOpen = navList.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-expanded', isOpen);
