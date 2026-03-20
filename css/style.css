@@ -1,0 +1,290 @@
+/* === Reset & Base === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  background-color: #57382e;
+  color: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === Navigation === */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 1rem 2rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav__list a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s;
+}
+
+.nav__list a:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 110;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 1px;
+}
+
+/* Hamburger active state */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === Hero === */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 0;
+}
+
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Spacer so content starts after the hero viewport */
+.hero + .section {
+  margin-top: 100dvh;
+}
+
+.hero__img--bottom {
+  z-index: 1;
+}
+
+.hero__img--top {
+  z-index: 2;
+}
+
+/* === Sections === */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+.credit {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* === Musikk === */
+.musikk__cover {
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.musikk__links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.musikk__links a {
+  font-size: 1rem;
+}
+
+/* === Bio === */
+.bio__text p {
+  margin-bottom: 1.2rem;
+}
+
+/* === Bilder === */
+.bilder__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bilder__grid a {
+  display: block;
+  overflow: hidden;
+}
+
+.bilder__grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bilder__grid a:hover img {
+  transform: scale(1.05);
+}
+
+/* === SoMe === */
+.some__links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.some__links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.some__links a:hover {
+  opacity: 0.7;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav__list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100dvh;
+    background: rgba(87, 56, 46, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  .nav__list.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__list a {
+    font-size: 1.3rem;
+  }
+
+  .bilder__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bilder__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .some__links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .musikk__links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
