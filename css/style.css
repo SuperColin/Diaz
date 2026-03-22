@@ -249,6 +249,16 @@ h2 {
   line-height: 1.6;
 }
 
+/* === Row layout === */
+.row {
+  display: flex;
+  gap: 4rem;
+}
+
+.row__col {
+  flex: 1;
+}
+
 /* === SoMe === */
 .some__links {
   display: flex;
@@ -324,6 +334,11 @@ h2 {
 
   .nav__list a {
     font-size: 1.3rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .bilder__grid {
