@@ -368,6 +368,7 @@ h2 {
   }
 
   .nav {
+    width: calc(100% - 2rem);
     padding: 1rem 1.5rem;
   }
 
