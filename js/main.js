@@ -1,5 +1,6 @@
 // Hero scroll fade effect
 const heroTop = document.querySelector('.hero__img--top');
+const chevron = document.querySelector('.hero__chevron');
 let ticking = false;
 
 function updateHeroFade() {
@@ -7,6 +8,7 @@ function updateHeroFade() {
   const vh = window.innerHeight;
   const opacity = Math.max(0, 1 - scrollY / vh);
   heroTop.style.opacity = opacity;
+  chevron.style.opacity = Math.max(0, 1 - scrollY / (vh * 0.15));
   ticking = false;
 }
 
