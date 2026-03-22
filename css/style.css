@@ -43,7 +43,16 @@ img {
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav__logo {
+  width: 350px;
+  max-width: 80%;
 }
 
 .nav__list {
