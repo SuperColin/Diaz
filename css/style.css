@@ -33,6 +33,10 @@ img {
   display: block;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 /* === Navigation === */
 .nav {
   position: fixed;

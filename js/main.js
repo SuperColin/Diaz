@@ -27,6 +27,7 @@ hamburger.addEventListener('click', function () {
   const isOpen = navList.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-expanded', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
 });
 
 // Close menu on anchor click
@@ -35,6 +36,7 @@ navList.querySelectorAll('a').forEach(function (link) {
     navList.classList.remove('open');
     hamburger.classList.remove('active');
     hamburger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
   });
 });
 
