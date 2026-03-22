@@ -132,6 +132,27 @@ img {
   z-index: 2;
 }
 
+.hero__chevron {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: #fff;
+  opacity: 0.7;
+  animation: bounce 2s ease infinite;
+  transition: opacity 0.3s;
+}
+
+.hero__chevron:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
 /* === Sections === */
 .section {
   position: relative;
@@ -216,6 +237,11 @@ h2 {
 /* === Bio === */
 .bio__text p {
   margin-bottom: 1.2rem;
+}
+
+.bio__signature {
+  max-width: 200px;
+  margin-top: 2rem;
 }
 
 /* === Bilder === */
