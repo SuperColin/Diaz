@@ -40,7 +40,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 800px;
+  max-width: 928px;
   z-index: 100;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
