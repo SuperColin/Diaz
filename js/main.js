@@ -1,6 +1,7 @@
 // Hero scroll fade effect
 const heroTop = document.querySelector('.hero__img--top');
 const chevron = document.querySelector('.hero__chevron');
+const nav = document.querySelector('.nav');
 let ticking = false;
 
 function updateHeroFade() {
@@ -9,6 +10,16 @@ function updateHeroFade() {
   const opacity = Math.max(0, 1 - scrollY / vh);
   heroTop.style.opacity = opacity;
   chevron.style.opacity = Math.max(0, 1 - scrollY / (vh * 0.15));
+  var progress = Math.min(1, scrollY / vh);
+  var bottomOpacity = 0.8 * progress;
+  nav.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,' + bottomOpacity + '))';
+  var scale = 1 - (0.25 * progress);
+  nav.querySelector('.nav__logo').style.transform = 'scale(' + scale + ')';
+  var padT = 2 - (1.5 * progress);
+  var padB = 2.5 - (1.5 * progress);
+  nav.style.padding = padT + 'rem 2rem ' + padB + 'rem';
+  var gap = 0.8 - (0.8 * progress);
+  nav.style.gap = gap + 'rem';
   ticking = false;
 }
 
