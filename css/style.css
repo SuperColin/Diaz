@@ -546,7 +546,15 @@ h2 {
   }
 
   .nav {
-    padding: 1rem 1.5rem 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav__logo {
+    width: 172px;
+    max-width: none;
   }
 
   .nav__list {
