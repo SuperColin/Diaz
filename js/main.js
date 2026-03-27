@@ -11,8 +11,9 @@ function updateHeroFade() {
   heroTop.style.opacity = opacity;
   chevron.style.opacity = Math.max(0, 1 - scrollY / (vh * 0.15));
   var progress = Math.min(1, scrollY / vh);
-  var bottomOpacity = 0.8 * progress;
-  nav.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,' + bottomOpacity + '))';
+  var topOpacity = 0.8 + (0.15 * progress);
+  var bottomOpacity = 0.95 * progress;
+  nav.style.background = 'linear-gradient(to bottom, rgba(0,0,0,' + topOpacity + '), rgba(0,0,0,' + bottomOpacity + '))';
   var scale = 1 - (0.25 * progress);
   nav.querySelector('.nav__logo').style.transform = 'scale(' + scale + ')';
   var padT = 2 - (1.5 * progress);
