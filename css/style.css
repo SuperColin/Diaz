@@ -553,6 +553,26 @@ h2 {
   display: block;
 }
 
+.merch__lp {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+
+.merch__lp-img {
+  width: 280px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.merch__lp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.7;
+}
+
 /* === Videos === */
 .video__grid {
   display: grid;
