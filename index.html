@@ -147,13 +147,13 @@
       <div class="merch__card">
         <h3 class="merch__card-title">Eksklusiv I en skog t-skjorte!</h3>
         <div class="merch__grid">
-          <div class="merch__item">
+          <div class="merch__item" data-modal-src="media/tshirt-00.jpg">
             <img src="media/tshirt-00.jpg" alt="I en skog t-skjorte">
           </div>
-          <div class="merch__item">
+          <div class="merch__item" data-modal-src="media/tshirt-01.jpg">
             <img src="media/tshirt-01.jpg" alt="I en skog t-skjorte">
           </div>
-          <div class="merch__item">
+          <div class="merch__item" data-modal-src="media/tshirt-02.jpg">
             <img src="media/tshirt-02.jpg" alt="I en skog t-skjorte">
           </div>
         </div>
@@ -256,6 +256,12 @@
     <a href="https://www.instagram.com/andresrafaeldiaz/" target="_blank" rel="noopener" aria-label="Instagram">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
     </a>
+  </div>
+
+  <!-- Image modal -->
+  <div class="modal" id="imgModal" aria-modal="true" role="dialog">
+    <button class="modal__close" aria-label="Lukk">&times;</button>
+    <img class="modal__img" src="" alt="">
   </div>
 
   <script src="js/main.js"></script>

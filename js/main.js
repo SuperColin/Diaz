@@ -54,6 +54,31 @@ navList.querySelectorAll('a').forEach(function (link) {
   });
 });
 
+// Image modal
+const modal = document.getElementById('imgModal');
+const modalImg = modal.querySelector('.modal__img');
+
+document.querySelectorAll('.merch__item[data-modal-src]').forEach(function (item) {
+  item.addEventListener('click', function () {
+    modalImg.src = this.dataset.modalSrc;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+modal.querySelector('.modal__close').addEventListener('click', closeModal);
+modal.addEventListener('click', function (e) {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 // Offset scroll for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
