@@ -790,6 +790,16 @@ h2 {
 }
 
 @media (max-width: 480px) {
+  .merch__lp {
+    flex-direction: column;
+  }
+
+  .merch__lp-img,
+  .merch__lp-text {
+    width: 100%;
+    flex: none;
+  }
+
   .video__grid {
     grid-template-columns: 1fr;
   }
