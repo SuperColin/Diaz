@@ -534,6 +534,25 @@ h2 {
   }
 }
 
+/* === Merch === */
+.merch__intro {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.merch__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.merch__item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
 /* === Videos === */
 .video__grid {
   display: grid;
